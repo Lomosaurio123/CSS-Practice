@@ -1,0 +1,533 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+
+.menu{
+    background-color: #f4f4f4;
+    height: 200px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+.Logo{
+    color: #334AFF;
+    font-size: 35px;
+    padding: 0 250px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu-items{
+    display: flex;  
+    list-style: none;
+    margin-right: 350px;  
+}
+
+.menu-items li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menu-items li a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    text-transform: uppercase;
+    color: #3498DB;
+}
+
+.menu-items li:hover, li.active {
+    background-color: rgba(0, 0, 0, .3);
+    transition: .4s;
+}
+
+.btn-menu {
+    margin-right: 30px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+ul.show {
+    top: 65px;
+}
+
+@media screen and (max-width: 952px){
+    .Logo{
+        font-size:30px;
+        padding-left: 35px;
+    }
+
+    .menu-items li a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 858px){
+    .menu{
+        height: 65px;
+    }
+    .btn-menu{
+        display: inline-flex;
+    }
+    .menu-items{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: #414141;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .menu-items li {
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    .menu-items li:hover {
+        background: none;
+    }
+    .menu-items li a {
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .menu-items li a:hover {
+        color: #f4f4f4;
+    }
+    .Logo {
+        font-size: 25px;
+        padding-left: 35px;
+    }
+}
+
+@media screen and (max-width: 858px) and (orientation: landscape) {
+    .menu-items li {
+        margin: 5px 0 0 0;
+    }
+    .menu-items {
+        overflow: scroll;
+        height: calc(100%-65px);
+    }
+}
+
+.container1 {
+    position: relative;
+    z-index: -1;
+    width: 100vw;
+    height: 1000px;
+    background-color: #334AFF;
+    background-color: rgb(0, 88, 198);
+    display: flex ;
+}
+
+.info-initial {
+    align-items: center;
+    padding-top: 100px;
+    padding-left: 100px;
+    width: 45vw;
+    height: 100%;
+    background-color: #fff;
+}
+
+.info-title {
+    text-align: center;
+    color: #3458DB;
+    font-size: 85px;
+    text-align: left;
+}
+
+.subtitle{
+    padding-top: 30px;
+    font-size: 25px;
+    color: #5D6D7E
+}
+
+.img-initial{
+    background-image: url(../assets/front-view-female-nurse-white-medical-suit-with-red-mask-injection-her-hands-blue.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+}
+
+.protection {
+    margin-top: 50px;
+    width: 225px;
+    height: 50px;
+    float: left;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+.selected {
+    margin-top: 50px;
+    width: 225px;
+    height: 50px;
+
+    margin-left: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+.shield-icon {
+    padding-right: 10px;
+    font-size: 25px;
+    color: #F7DC6F;
+}
+
+.shield-info {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.star {
+    padding-right: 10px;
+    font-size: 25px;
+    color: #F7DC6F;
+}
+
+.star-info {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.schedule {
+    margin-top: 150px;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.clock {
+    padding-right: 10px;
+    width: 50px;
+    font-size: 25px;
+    color: #334AFF;
+}
+
+.clock-info {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.schedule-options {
+    position: absolute;
+    width: 1400px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+.location {
+    margin-left: 50px;
+    width: 300px;
+    height: 100px;
+}
+
+.date {
+    margin-left: 50px;
+    width: 300px;
+    height: 100px;
+}
+
+.type {
+    margin-left: 50px;
+    width: 300px;
+    height: 100px;
+}
+
+.l-first {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.l-icon {
+    font-size: 20px;
+    color: #334AFF;
+}
+
+.l-first-info {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5D6D7E;
+}
+
+.l-second {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.l-second-info {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.l-button {
+    z-index: auto;
+    width: 200px;
+    height: 80px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #f4f4f4;
+    background-color: #334AFF;
+    border-color: #f4f4f4;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+.reasons {
+    width: 100vw;
+    height: auto;
+}
+
+.intro-reasons {
+    width: 800px;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.r-title {
+    font-weight: bold;
+    font-size: 80px;
+    color: #334AFF;
+}
+
+.r-info {
+    margin-top: 25px;
+    font-size: 25px;
+    color: #5D6D7E;
+}
+
+.cards-info {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    padding-left: 250px;
+}
+
+.card {
+    width: 280px;
+    height: 350px;
+    margin-top: 70px;
+    margin-left: 50px;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 15px;
+    border-radius: 10px;
+}
+
+.c-icon {
+    font-size: 45px;
+    color: #3458DB;  
+    margin-bottom: 20px;  
+}
+
+.c-title {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #414141;
+}
+
+.c-info {
+    font-weight: bold;
+    color: #5D6D7E;
+    width: 250px;
+}
+
+.preparation {  
+    width: 100%;
+    height: 800px;
+    display: flex;
+}
+
+.p-img {
+    width: 60vw;
+    height: 800px;
+    background-image: url(../assets/front-view-young-woman-sterile-mask-yellow-wall.jpg);
+    background-size: cover;
+}
+
+.p-info {
+    width: 40%;
+    height: 800px;
+    margin-top: 5px;
+}
+
+.info-p{
+    width: 590px;
+    height: 100px;
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 45px;
+    padding-top: 25px;
+    padding-left: 5px;
+    color: #3458DB;
+}
+
+.detail-p {
+    width: 600px;
+    height: auto;
+    margin-left: 100px;
+    font-size: 25px;
+    color: #5D6D7E;
+}
+
+.option-p {
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 590px;
+    height: auto;
+}
+
+.op-p {
+    width: 590px;
+    height: 60px;
+    margin-top: 30px;
+    display: flex;
+    padding-top: 15px;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.p-icon {
+    font-size: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #334AFF;
+}
+
+.p-title {
+    font-size: 25px;
+    color: #5D6D7E;
+}
+
+.contacts {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.co-data {
+    width: 40%;
+    height: 800px;
+}
+
+.co-img {
+    width: 60%;
+    height: 900px;
+    background-color: #3458DB;
+    background-image: url(../assets/portrait-man-doctor-using-cellphone.png);
+    background-size: cover;
+}
+
+.co-title {
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    margin-top: 60px;
+    margin-left: 100px;
+    font-weight: bold;
+    color: #334AFF;
+}
+
+.co-info{
+    width: 500px;
+    height: auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5D6D7E;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.co-cards {
+    width: auto;
+    height: auto;
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+.section-card1 {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.co-card {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-left: 30px;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.co-head {
+    width: auto;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 40px;
+    display: flex;
+}
+
+.co-icon {
+    font-size: 55px;
+    color: #334AFF;
+}
+
+.co-title-card {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 40px;
+    color: #414141;
+}
+
+.co-footer {
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.call {
+    background-color: #F4FEFF;
+    color: #334AFF;
+    font-size: 20px;
+}
+
+.call:hover {
+    background-color: #334AFF;
+    color: #F4FEFF;
+    transition: 300ms;
+}
